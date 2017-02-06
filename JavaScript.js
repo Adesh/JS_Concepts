@@ -11,12 +11,22 @@
 		}
 
 /* optional parameters in JS */
-	// Ex:
-		var func = function(){
+	// Ex: 1
+		function func(){
 			for(var i in arguments){
 				alert(arguments[i]);
 		  		arguments[i] = arguments[i] || __defaultValue__; 
 		  	}
+		}
+	// Ex: 2 -> default params
+		function func2(a=1, b=2){
+			//...
+		}
+	// Ex: 3 -> default params
+		function func3(a,b, ...c){
+			for(var i in c.length){
+				alert(c[i]);	
+			}
 		}
 		func(1);
 		func('a','b','c','d');
