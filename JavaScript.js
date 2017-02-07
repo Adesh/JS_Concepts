@@ -45,3 +45,14 @@
 		alert(y);	// will not be found
 		var x; 		// Declaration - will not be hoisted
 		var y = 7; 	// Initialize - will be hoisted
+
+/* "use strict"; in JS */
+	// Using a variable without declaring is not allowed
+	// Deleting a variable (or object) is not allowed 
+	// Escape characters are not allowed and few more...
+	// Ex:
+		"use strict";	// can be at beginning of a script or a function
+		var x = 3.14;
+		delete x;   	// error	
+		y = 5;		// error
+		z = \010;       // error
